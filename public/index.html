@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="description" content="FanPulse — IPL Edition. React to match moments live, join team communities, feel the Wankhede energy from home. 🏏" />
+  <meta name="theme-color" content="#1A3C6E" />
+  <title>FanPulse — Cricket ka josh, live, together 🏏</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- 3-column root: desk-left | app | desk-right -->
+  <div id="root-wrap">
+    
+    <!-- DESKTOP LEFT SIDEBAR -->
+    <aside id="desk-left" aria-label="Desktop Navigation">
+      <div class="dsk-sidebar-logo">
+        <div class="dsk-logo-text">Fan<span>Pulse</span></div>
+      </div>
+      <div class="dsk-nav">
+        <!-- The 'match' (Live Room) is prioritized as per the new sitemap -->
+        <button class="dsk-nav-item" data-tab="match">
+          <span class="dsk-nav-icon">🏏</span><span class="dsk-nav-label">Live Match</span>
+        </button>
+        <button class="dsk-nav-item" data-tab="home">
+          <span class="dsk-nav-icon">🏠</span><span class="dsk-nav-label">Home</span>
+        </button>
+        <button class="dsk-nav-item" data-tab="leaderboard">
+          <span class="dsk-nav-icon">🏆</span><span class="dsk-nav-label">Leaderboard</span>
+        </button>
+        <button class="dsk-nav-item" data-tab="profile">
+          <span class="dsk-nav-icon">👤</span><span class="dsk-nav-label">Profile</span>
+        </button>
+      </div>
+      <div id="dsk-user-widget">
+        <!-- Will be populated by JS if user is logged in -->
+      </div>
+    </aside>
+
+    <!-- MOBILE APP AREA -->
+    <main id="app" role="main"></main>
+
+    <!-- DESKTOP RIGHT SIDEBAR -->
+    <aside id="desk-right" aria-label="Match Sidebar">
+      <div class="dsk-panel-hdr">Top Fans Overview</div>
+      <div class="dsk-panel-section" id="dsk-leaderboard-preview">
+        <!-- Populated by JS -->
+        <div class="t-xs c-muted center" style="padding:10px 0;">Loading...</div>
+      </div>
+      <div class="dsk-panel-hdr">Trending Matches</div>
+      <div class="dsk-panel-section" id="dsk-trending-matches">
+        <!-- Populated by JS -->
+        <div class="t-xs c-muted center" style="padding:10px 0;">Loading...</div>
+      </div>
+    </aside>
+    
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
